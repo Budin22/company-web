@@ -354,7 +354,6 @@ body {
   }
 }
 .indicators {
-
   &__list {
     padding-left: 30px;
   }
@@ -368,6 +367,47 @@ body {
   }
   &__text {
     max-width: 355px;
+  }
+}
+@media (max-width:1920px) {
+  .services__container {
+    max-width: 1110px;
+  }
+  .services__body {
+    max-width: 664px;
+  }
+}
+@media (max-width:1440px) {
+  .services__container {
+    max-width: 964px;
+  }
+  .services__body {
+    max-width: 486px;
+  }
+}
+@media (max-width:1024px) {
+  .services__container {
+    max-width: 678px;
+    padding: 60px 15px;
+    grid-template-columns: auto;
+    gap: 30px 0;
+  }
+  .services__body {
+    max-width: 100%;
+  }
+}
+@media (max-width:768px) {
+  .services {
+    &__container {
+      max-width: 375px;
+      padding: 30px 15px;
+    }
+    &__body {
+      max-width: 315px;
+    }
+    &__title {
+      @include font-primary (30px, 37px);
+    }
   }
 }
 //    team            ///////////////////////////////////////////////////////////////////
@@ -387,26 +427,13 @@ body {
     text-shadow: 0 15px 30px rgba(40, 40, 86, 0.8);
   }
 }
-
 @media (max-width:1920px) {
-  .services__container {
-    max-width: 1110px;
-  }
-  .services__body {
-    max-width: 664px;
-  }
   .team {
     background-size: 100% auto;
     padding: 163px 0 158px 0;
   }
 }
 @media (max-width:1440px) {
-  .services__container {
-    max-width: 964px;
-  }
-  .services__body {
-    max-width: 486px;
-  }
   .team {
     padding: 103px 0;
     &__title {
@@ -415,15 +442,6 @@ body {
   }
 }
 @media (max-width:1024px) {
-  .services__container {
-    max-width: 678px;
-    padding: 60px 15px;
-    grid-template-columns: auto;
-    gap: 30px 0;
-  }
-  .services__body {
-    max-width: 100%;
-  }
   .team {
     padding: 89px 0;
     &__title {
@@ -432,18 +450,6 @@ body {
   }
 }
 @media (max-width:768px) {
-  .services {
-    &__container {
-      max-width: 375px;
-      padding: 30px 15px;
-    }
-    &__body {
-      max-width: 315px;
-    }
-    &__title {
-      @include font-primary (30px, 37px);
-    }
-  }
   .team {
     padding: 35px 0;
     &__title {
@@ -452,7 +458,7 @@ body {
     }
   }
 }
-//    header            ///////////////////////////////////////////////////////////////////
+//    quality            ///////////////////////////////////////////////////////////////////
 
 .quality {
   &__container {
@@ -523,7 +529,7 @@ body {
     }
   }
 }
-//    header            ///////////////////////////////////////////////////////////////////
+//    swiper            ///////////////////////////////////////////////////////////////////
 
 .swiper {
   &__section {
@@ -829,4 +835,3 @@ body {
     }
   }
 }
-
