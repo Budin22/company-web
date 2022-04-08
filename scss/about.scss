@@ -150,13 +150,15 @@ body {
   &__link {
     display: block;
     @include font-primary (16px, 20px, $color-active-regular, $weight-bold, $font-family);
-
     &:hover {
       border-bottom: 2px solid $color-active-regular;
     }
     &--active {
       color: $color-accent;
       border-bottom: 2px solid $color-accent;
+      &:hover {
+        border-bottom: 2px solid $color-accent;
+      }
     }
   }
 }
@@ -337,8 +339,6 @@ body {
     background: $color-gradient-color-text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
     margin-bottom: 28px;
   }
   &__text {
@@ -482,8 +482,6 @@ body {
     background: $color-gradient-color-text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
   }
 }
 @media (max-width:1920px) {
@@ -689,7 +687,6 @@ body {
     @include font-primary (12px, 15px, $color-active-regular, $weight-bold);
     letter-spacing: 1px;
     text-transform: uppercase;
-
     &:hover {
       color: $color-accent;
     }
@@ -793,13 +790,11 @@ body {
       padding: 30px 15px;
       justify-items: center;
     }
-
     &-contact__list {
       display: flex;
       flex-direction: column;
       justify-items: center;
     }
-
     &-contact__item {
       margin-bottom: 10px;
       margin-right: 0;
@@ -824,7 +819,6 @@ body {
     }
   }
   .phone__link {
-
     &::before {
       content: "";
       display: none;
