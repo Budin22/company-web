@@ -730,9 +730,6 @@ body {
     top: 0;
   }
 }
-.screen {
-  background-color: #323264;
-}
 .screen__container {
   padding: 72px 0 0 0;
   height: 100vh;
@@ -769,6 +766,25 @@ body {
   .screen__container {
     background-size: cover;
   }
+}
+.intro__container {
+  display: flex;
+}
+.intro__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  border-right: rgba(255, 255, 255, 0.3) solid 4px;
+  padding-right: 60px;
+}
+.intro__link {
+  font-size: 38px;
+  color: #B3B3BA;
+  font-weight: 700;
+  line-height: 46px;
+}
+.intro__link:hover {
+  color: #F0145A;
 }
 .footer__container {
   max-width: 1630px;
