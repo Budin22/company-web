@@ -329,6 +329,8 @@ body {
   }
 }
 .screen {
+  background: $color-gradient-supersoft;
+  background-attachment: fixed;
   &__container {
     padding: 72px 0 0 0;
     height: 100vh;
@@ -368,9 +370,12 @@ body {
 }
 
 .intro {
+  background: $color-gradient-supersoft;
+  background-attachment: fixed;
   &__container {
+    padding: 60px 15px;
     display: flex;
-
+    justify-content: center;
   }
   &__list {
     display: flex;
@@ -378,26 +383,209 @@ body {
     align-items: flex-end;
     border-right: rgba(255, 255, 255, 0.3) solid 4px;
     padding-right: 60px;
+    margin-right: 60px;
 
+  }
+  &__item {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   &__link {
     @include font-primary(38px, 46px, $color-grey-text, $weight-bold);
+
     &:hover {
       color: $color-accent;
-    }
-    &__link--active {
 
     }
+    &--active {
+      background: $color-gradient-color-text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
 
+    }
   }
   &__body {
-
+    max-width: 861px;
+    width: 100%;
+    padding: 73px 0;
   }
   &__title {
-
+    @include font-primary(30px, 37px, $color-white, $weight-bold);
+    margin-bottom: 30px;
   }
   &__text {
+    @include font-primary(19px, 30px, $color-white, $weight-regular);
+  }
+}
+@media (max-width: 1920px){
+  .intro {
+    &__container {
+      max-width: 1110px;
+    }
+    &__body {
+      max-width: 581px;
+      padding-top: 43px;
+      padding-bottom: 43px;
+    }
+  }
+}
+@media (max-width: 1440px){
+  .intro {
+    &__container {
+      max-width: 934px;
+    }
+    &__body {
+      max-width: 405px;
+      padding-top: 9px;
+      padding-bottom: 9px;
+    }
+  }
+}
 
+@media (max-width: 1024px){
+  .intro {
+    &__container {
+      padding: 0;
+      max-width: 100%;
+      flex-direction: column;
+    }
+    &__body {
+      border-top: rgba(255, 255, 255, 0.3) solid 4px;
+      max-width: 648px;
+      padding: 60px 0;
+    }
+  }
+}
+@media (max-width: 768px){
+
+}
+
+
+
+.service {
+  position: relative;
+  background: $color-gradient-supersoft;
+  background-attachment: fixed;
+  border-radius: 0 0 12px 12px;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: -10px;
+    background: #CACADB;
+    border-radius: 0 0 12px 12px;
+    height: 10px;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    bottom: -20px;
+    background: #E7E7F2;
+    border-radius: 0 0 12px 12px;
+    height: 10px;
+  }
+
+  &__container {
+    max-width: 1630px;
+
+  }
+  &__link {
+    @include font-primary(22px, 27px, $color-active-regular, $weight-bold);
+    margin-bottom: 30px;
+    display: block;
+    &:last-child {
+      margin-bottom: 15px;
+    }
+
+    &:hover {
+      color: $color-accent;
+
+    }
+  }
+  &-title__link {
+    @include font-primary(14px, 17px, $color-active-regular, $weight-bold);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: block;
+    &:hover {
+      color: $color-accent;
+
+    }
+  }
+  &__title {
+    @include font-primary(38px, 46px, $color-active-regular, $weight-bold);
+
+    background: $color-gradient-color-text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  &__list {
+    padding: 60px 0;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 60px;
+
+  }
+  &__item {
+
+  }
+  &__img {
+
+  }
+  &__link--img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    background-color: $color-white;
+    height: 92px;
+    width: 92px;
+  }
+  &__text {
+    @include font-primary(16px, 26px, $color-white, $weight-regular);
+  }
+}
+@media (max-width: 1920px){
+  .service__container {
+    max-width: 1150px;
+  }
+}
+@media (max-width: 1440px){
+  .service__container {
+    max-width: 934px;
+  }
+}
+@media (max-width: 1024px){
+  .service {
+    &__container {
+      max-width: 678px;
+    }
+    &__list {
+      grid-template-columns: auto auto;
+    }
+  }
+}
+@media (max-width: 768px){
+  .service {
+    &__container {
+      max-width: 345px;
+    }
+    &__list {
+      grid-template-columns: auto;
+      gap: 30px;
+      padding-top: 30px;
+    }
+    &__title {
+      @include font-primary(30px, 37px);
+    }
   }
 }
 
