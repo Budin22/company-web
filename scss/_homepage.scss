@@ -476,6 +476,7 @@ body {
     background: #CACADB;
     border-radius: 0 0 12px 12px;
     height: 10px;
+    z-index: 2;
   }
   &::after {
     content: '';
@@ -486,6 +487,7 @@ body {
     background: #E7E7F2;
     border-radius: 0 0 12px 12px;
     height: 10px;
+    z-index: 3;
   }
 
   &__container {
@@ -533,10 +535,9 @@ body {
 
   }
   &__item {
-
-  }
-  &__img {
-
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
   &__link--img {
     display: flex;
@@ -700,7 +701,97 @@ body {
   }
 }
 
+.swiper {
+  background-color: $color-white;
+  padding-top: 60px;
+  padding-bottom: 46px;
+  &__body-text {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
+  }
+  &__link {
+    @include font-primary(14px, 17px, $color-active-regular, $weight-bold);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  &__text {
+    @include font-primary(38px, 46px, $color-active-regular, $weight-bold);
+    background: $color-gradient-color-text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 5px 0 30px 0;
+  }
+  &__staf-name {
+    @include font-primary(16px, 20px, $color-grey-text, $weight-bold);
+    padding-bottom: 6px;
+  }
+  &__staf-position {
+    @include font-primary(14px, 22px, $color-grey-text);
+  }
+  &-slide {
+    background-color: $color-grey-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+  }
+  &.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap,7px);
+  }
+  &-pagination-bullet {
+    width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,16px));
+    height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,16px));
+    &:hover {
+      background-color: $color-active-regular;
+    }
+  }
+  &.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 0;
+    left: -16px;
+  }
+
+}
+@media (max-width:1920px) {
+  .swiper {
+    &__container {
+      max-width: 1350px;
+    }
+  }
+}
+@media (max-width:1440px) {
+  .swiper {
+    &__container {
+      max-width: 934px;
+    }
+  }
+}
+@media (max-width:1024px) {
+  .swiper {
+    &__container {
+      max-width: 678px;
+    }
+    &-slide {
+      flex-direction: column;
+    }
+  }
+}
+@media (max-width:768px) {
+  .swiper {
+    &__container {
+      max-width: 345px;
+    }
+    &__text {
+      @include font-primary(30px, 37px);
+    }
+  }
+}
 
 .publications {
   background-color: #F5F5FA;
@@ -720,6 +811,9 @@ body {
     &--title {
       @include font-primary(16px, 20px, $color-active-regular, $weight-bold);
       padding: 10px 0 30px 0;
+      &:hover {
+        color: $color-accent;
+      }
     }
     &:hover {
       color: $color-accent;
@@ -743,6 +837,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: $color-white;
+    align-items: flex-start;
     &--equity-associate-img {
       background-image: url("../img/jpeg/equity-associate-1920.jpg");
       background-repeat: no-repeat;
