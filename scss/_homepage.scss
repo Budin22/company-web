@@ -8,7 +8,7 @@ body {
 }
 .container {
   padding: 0 15px;
-  max-width: 1570px;
+  max-width: 1630px;
   width: 100%;
   margin: 0 auto;
 }
@@ -226,7 +226,6 @@ body {
   }
   .additional {
     background-color: $color-grey-bg;
-    background-color: rgba(245, 245, 250, 0.2);/////////////////////////
     width: 100%;
     padding: 10px 15px;
     position: absolute;
@@ -591,6 +590,7 @@ body {
 
 .trust {
   &__container {
+    padding: 60px 15px;
 
   }
   &__title {
@@ -703,6 +703,82 @@ body {
 
 
 
+.publications {
+  background-color: #F5F5FA;
+  padding-top: 30px;
+  &__container {
+    border-bottom: $color-grey-separator solid 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+  &__link {
+    @include font-primary(14px, 17px, $color-active-regular, $weight-bold);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    &--title {
+      @include font-primary(16px, 20px, $color-active-regular, $weight-bold);
+      padding: 10px 0 30px 0;
+    }
+    &:hover {
+      color: $color-accent;
+    }
+  }
+  &__title {
+    @include font-primary(38px, 46px, $color-active-regular, $weight-bold);
+    background: $color-gradient-color-text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__list {
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0 30px;
+  }
+  &__item {
+    padding: 230px 30px 30px 30px;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+    &--equity-associate-img {
+      background-image: url("../img/jpeg/equity-associate-1920.jpg");
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position: top center;
+    }
+    &--gdpr-img {
+      background-image: url("../img/jpeg/gdpr-1920.jpg");
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position: top center;
+    }
+    &--millennial-testament-img {
+      background-image: url("../img/jpeg/millennial-testament-1920.jpg");
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position: top center;
+    }
+  }
+  &__date {
+    @include font-primary(12px, 15px, $color-grey-text, $weight-bold);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 15px 0;
+    border-bottom: $color-grey-separator solid 4px;
+  }
+  &__text {
+    padding-top: 15px;
+    @include font-primary(14px, 22px, $color-black);
+  }
+}
+
+
+
+
+
 
 
 
@@ -736,6 +812,7 @@ body {
 //    footer            ///////////////////////////////////////////////////////////////////
 
 .footer {
+  background-color: $color-grey-bg;
   &__container {
     max-width: 1630px;
     padding: 30px 15px;
