@@ -456,22 +456,23 @@ body {
 }
 .language__link {
   font-size: 12px;
-  color: #B3B3BA;
+  color: #FFFFFF;
   font-weight: 700;
   line-height: 15px;
   font-family: "Montserrat", sans-serif;
   padding: 5px 7px;
   border-radius: 8px;
   display: block;
-  color: #FFFFFF;
 }
 .language__link:hover {
-  background-color: #F5F5FA;
   background-color: rgba(255, 255, 255, 0.2);
 }
 .language__link--active {
   background-color: #F0145A;
   color: #FFFFFF;
+}
+.language__link--active:hover {
+  background-color: #F0145A;
 }
 
 .contact__list {
@@ -507,7 +508,6 @@ body {
 }
 .contact__link {
   display: block;
-  color: #B3B3BA;
   color: #FFFFFF;
 }
 .contact__link--phone {
@@ -552,7 +552,6 @@ body {
   color: #FFFFFF;
 }
 .navigation__link:hover {
-  border-bottom: 2px solid #24A3FF;
   border-bottom: 2px solid #FFFFFF;
 }
 .navigation__link--active {

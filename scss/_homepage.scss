@@ -58,19 +58,20 @@ body {
   &__item {
   }
   &__link {
-    @include font-primary(12px, 15px, $color-grey-text, $weight-bold, $font-family);
+    @include font-primary(12px, 15px, $color-white, $weight-bold, $font-family);
     padding: 5px 7px;
     border-radius: 8px;
     display: block;
-    color: $color-white;////////////////////////////
   }
   &__link:hover {
-    background-color: $color-grey-bg;
-    background-color: rgba(255, 255, 255, 0.2); //////////////////
+    background-color: rgba(255, 255, 255, 0.2);
   }
   &__link--active {
     background-color: $color-accent;
     color: $color-white;
+    &:hover {
+      background-color: $color-accent;
+    }
   }
 }
 .contact {
@@ -107,11 +108,10 @@ body {
   }
   &__link {
     display: block;
-    color: $color-grey-text;
-    color: $color-white; ////////////////////////
+    color: $color-white;
     &--phone {
       font-weight: $weight-bold;
-      color: $color-white; ////////////////////////
+      color: $color-white;
     }
   }
 }
@@ -154,9 +154,7 @@ body {
     @include font-primary (16px, 20px, $color-active-regular, $weight-bold, $font-family);
     color: $color-white;
     &:hover {
-      border-bottom: 2px solid $color-active-regular;
-      border-bottom: 2px solid $color-white; ////////////////////////////////////
-
+      border-bottom: 2px solid $color-white;
     }
     &--active {
       color: $color-accent;
