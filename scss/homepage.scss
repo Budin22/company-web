@@ -366,7 +366,6 @@ body {
     max-width: 375px;
   }
 }
-
 .intro {
   background: $color-gradient-supersoft;
   background-attachment: fixed;
@@ -386,7 +385,6 @@ body {
     border-right: rgba(255, 255, 255, 0.3) solid 4px;
     padding-right: 60px;
     margin-right: 60px;
-
   }
   &__item {
     margin-bottom: 30px;
@@ -396,7 +394,6 @@ body {
   }
   &__link {
     @include font-primary(38px, 46px, $color-grey-text, $weight-bold);
-
     &:hover {
       color: $color-accent;
     }
@@ -446,7 +443,6 @@ body {
 @media (max-width: 1024px){
   .intro {
     overflow-x: hidden;
-
     &__container {
       padding: 0;
       max-width: 698px;
@@ -465,7 +461,6 @@ body {
     }
     &__swiper {
       display: block;
-
     }
     &__list--swiper {
       flex-direction: row;
@@ -495,7 +490,6 @@ body {
       @include font-primary(30px, 37px);
 
     }
-
   }
 }
 

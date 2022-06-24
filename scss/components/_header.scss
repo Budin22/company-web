@@ -1,5 +1,4 @@
 body {
-  position: relative;
   min-width: 375px;
   font-family: 'Montserrat', sans-serif;
   @include font-primary (16px, 20px, $color-main, $weight-regular);
@@ -7,17 +6,14 @@ body {
 .container {
   padding: 0 15px;
   max-width: 1630px;
-  width: 100%;
   margin: 0 auto;
 }
 .header {
-  padding-bottom: 60px;;
+  padding: 50px 0 60px 0;
   &__container {
-    padding-top: 50px;
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
-    gap: 16px 0;
   }
 }
 .logo {
@@ -26,7 +22,6 @@ body {
     margin-right: auto;
     grid-row: 1/3;
     grid-column: 1/2;
-    width: 100%;
   }
   &__link {
   }
@@ -52,6 +47,7 @@ body {
   display: flex;
   align-items: center;
   align-content: flex-start;
+  padding-bottom: 16px;
 }
 .language {
   &__list {
@@ -171,16 +167,17 @@ body {
   .header__container {
     grid-template-columns: auto;
     grid-template-rows: auto auto auto;
-    gap: 30px 0;
     max-width: 678px;
   }
   .logo__body {
     grid-row: 2/3;
+    padding: 30px 0;
   }
   .additional {
     grid-row: 1/2;
     grid-column: 1/2;
     margin-left: 0;
+    padding-bottom: 0;
   }
   .navigation {
     grid-row: 3/4;
@@ -189,16 +186,24 @@ body {
   }
 }
 @media (max-width:768px) {
+  .header {
+    padding: 0 0 30px 0;
+  }
   .header__container {
     gap: 0;
-    padding: 40px 0 5px 0;
+    padding: 0;
+    margin: 0;
     max-width: 100%;
+    grid-template-columns: auto;
+    grid-template-rows: auto
   }
   .logo {
     &__body {
+      grid-row: 2/3;
       margin: 0 auto;
       max-width: 375px;
-      padding: 15px 15px 20px 15px;
+      width: 100%;
+      padding: 15px 15px 10px 15px;
     }
     &__img {
       max-height: 32px;
@@ -218,10 +223,8 @@ body {
     background-color: $color-grey-bg;
     width: 100%;
     padding: 10px 15px;
-    position: absolute;
-    left: 0;
-    top: 0;
     justify-content: center;
+    grid-row: 1/2;
   }
   .contact {
     &__list {
