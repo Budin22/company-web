@@ -1,0 +1,121 @@
+.service {
+  position: relative;
+  background: $color-gradient-supersoft;
+  background-attachment: fixed;
+  border-radius: 0 0 12px 12px;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: -10px;
+    background: #CACADB;
+    border-radius: 0 0 12px 12px;
+    height: 10px;
+    z-index: 2;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    bottom: -20px;
+    background: #E7E7F2;
+    border-radius: 0 0 12px 12px;
+    height: 10px;
+    z-index: 3;
+  }
+
+  &__container {
+    max-width: 1630px;
+
+  }
+  &__link {
+    @include font-primary(22px, 27px, $color-active-regular, $weight-bold);
+    margin-bottom: 30px;
+    display: block;
+    &:last-child {
+      margin-bottom: 15px;
+    }
+    &:hover {
+      color: $color-accent;
+    }
+  }
+  &-title__link {
+    @include font-primary(14px, 17px, $color-active-regular, $weight-bold);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: block;
+    &:hover {
+      color: $color-accent;
+
+    }
+  }
+  &__title {
+    @include font-primary(38px, 46px, $color-active-regular, $weight-bold);
+    background: $color-gradient-color-text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  &__list {
+    padding: 60px 0;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 60px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__link--img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    background-color: $color-white;
+    height: 92px;
+    width: 92px;
+  }
+  &__text {
+    @include font-primary(16px, 26px, $color-white, $weight-regular);
+  }
+}
+@media (max-width: 1920px){
+  .service__container {
+    max-width: 1150px;
+  }
+}
+@media (max-width: 1440px){
+  .service__container {
+    max-width: 934px;
+  }
+}
+@media (max-width: 1024px){
+  .service {
+    &__container {
+      max-width: 678px;
+    }
+    &__list {
+      grid-template-columns: auto auto;
+    }
+  }
+}
+@media (max-width: 768px){
+  .service {
+    &__container {
+      max-width: 345px;
+    }
+    &__list {
+      grid-template-columns: auto;
+      gap: 30px;
+      padding-top: 30px;
+    }
+    &__title {
+      @include font-primary(30px, 37px);
+    }
+  }
+}

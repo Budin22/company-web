@@ -1,0 +1,109 @@
+.swiper {
+  &__section {
+    background-color: $color-grey-bg;
+  }
+  &__container {
+    padding: 30px 0;
+    max-width: 1600px;
+    position: relative;
+    border-bottom: $color-grey-separator solid 2px;
+  }
+  &__title {
+    @include font-primary (14px, 17px, $color-main, $weight-bold);
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  &-wrapper {
+    padding: 30px 0 46px 0;
+  }
+  &-slide {
+    background-color: $color-white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    border-radius: 12px;
+    max-width: 370px;
+  }
+  &.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap,7px);
+  }
+  &-pagination-bullet {
+    width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,16px));
+    height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,16px));
+    &:hover {
+      background-color: $color-active-regular;
+    }
+  }
+  &.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: -2px;
+    left: -16px;
+  }
+  &__link {
+    height: 110px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__img {
+    display: block;
+  }
+}
+@media (max-width:1920px) {
+  .swiper {
+    &__container {
+      max-width: 1320px;
+    }
+    &-slide {
+      max-width: 300px;
+    }
+  }
+}
+@media (max-width:1440px) {
+  .swiper {
+    &__container {
+      max-width: 904px;
+    }
+    &-slide {
+      max-width: 196px;
+    }
+  }
+}
+@media (max-width:1024px) {
+  .swiper {
+    &__container {
+      max-width: 648px;
+    }
+    &-slide {
+      max-width: 132px;
+      max-height: 90px;
+    }
+    &__img {
+      max-height: 40px;
+    }
+  }
+}
+@media (max-width:768px) {
+  .swiper {
+    &__container {
+      max-width: 255px;
+      padding: 30px 0;
+    }
+    &-slide {
+      max-width: 255px;
+    }
+    &.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+      left: -4px;
+    }
+  }
+}

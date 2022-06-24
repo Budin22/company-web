@@ -1,0 +1,96 @@
+.swiper {
+  &.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap,7px);
+  }
+  &-pagination-bullet {
+    width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,16px));
+    height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,16px));
+    &:hover {
+      background-color: $color-active-regular;
+    }
+  }
+  &.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 0;
+    left: -16px;
+  }
+}
+.team {
+  &__wrapper {
+    background-color: $color-white;
+    padding-top: 80px;
+    padding-bottom: 46px;
+  }
+  &__body-text {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__link {
+    @include font-primary(14px, 17px, $color-active-regular, $weight-bold);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    &:hover {
+      color: $color-accent;
+    }
+  }
+  &__text {
+    @include font-primary(38px, 46px, $color-active-regular, $weight-bold);
+    background: $color-gradient-color-text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 5px 0 30px 0;
+  }
+  &__staf-name {
+    @include font-primary(16px, 20px, $color-grey-text, $weight-bold);
+    padding-bottom: 6px;
+  }
+  &__staf-position {
+    @include font-primary(14px, 22px, $color-grey-text);
+  }
+  &__slide {
+    background-color: $color-grey-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width:1920px) {
+  .team {
+    &__container {
+      max-width: 1350px;
+    }
+  }
+}
+@media (max-width:1440px) {
+  .team {
+    &__container {
+      max-width: 934px;
+    }
+  }
+}
+@media (max-width:1024px) {
+  .team {
+    &__container {
+      max-width: 678px;
+    }
+  }
+  .team__slide {
+    flex-direction: column;
+  }
+}
+@media (max-width:768px) {
+  .team {
+    &__container {
+      max-width: 345px;
+    }
+    &__wrapper {
+      padding-top: 50px;
+    }
+  }
+  .team__text {
+    @include font-primary(30px, 37px);
+  }
+}
