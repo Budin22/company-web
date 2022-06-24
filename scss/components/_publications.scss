@@ -1,11 +1,10 @@
 .publications {
   background-color: #F5F5FA;
-  padding: 30px 15px 0 15px;
   &__container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0;
+    padding: 30px 15px 60px 15px;
   }
   &__link {
     @include font-primary(14px, 17px, $color-active-regular, $weight-bold);
@@ -13,7 +12,6 @@
     text-transform: uppercase;
     &--title {
       @include font-primary(16px, 20px, $color-active-regular, $weight-bold);
-      padding: 10px 0 30px 0;
       &:hover {
         color: $color-accent;
       }
@@ -35,12 +33,15 @@
     gap: 30px;
   }
   &__item {
-    padding: 0 30px 30px 30px;
     border-radius: 8px 8px 0 0;
     display: flex;
     flex-direction: column;
     background-color: $color-white;
-    align-items: flex-start;
+    &-body {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+    }
   }
   &__date {
     @include font-primary(12px, 15px, $color-grey-text, $weight-bold);
@@ -52,6 +53,38 @@
     padding-top: 15px;
     @include font-primary(14px, 22px, $color-black);
     border-top: $color-grey-separator solid 4px;
+  }
+}
+.btn {
+  @include font-primary(16px, 20px, $color-main, $weight-bold);
+  padding: 8px 30px 10px 30px;
+  text-align: center;
+  background-color: $color-grey-separator;
+  border-radius: 12px;
+  &:hover {
+    background-color: $color-grey-bg;
+  }
+  &__body {
+    display: flex;
+    margin: 0 auto;
+    background-color: $color-grey-separator;
+    border: $color-grey-separator solid 2px;
+    border-radius: 12px;
+    gap: 2px;
+  }
+  &__news {
+    background-color: $color-white;
+  }
+  &__publications {
+    @include font-primary(16px, 20px, $color-white, $weight-bold);
+    box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
+    padding: 18px 30px;
+    border-radius: 12px;
+    background-color: $color-active-regular;
+    margin: 0 auto;
+    &:hover {
+      background-color: $color-active-hover;
+    }
   }
 }
 @media (max-width: 1920px) {
